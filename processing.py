@@ -31,7 +31,7 @@ def process_pdf(uploaded_file, user_id):
     # Create/update vectorstore
     embeddings = GoogleGenerativeAIEmbeddings(
     model="models/embedding-001",
-    google_api_key= os.getenv("GEMINI_API_KEY")  # From Streamlit secrets
+    google_api_key= st.secrets.get("GEMINI_API_KEY", os.getenv("GEMINI_API_KEY"))  # From Streamlit secrets
 )
     vectorstore = Chroma.from_documents(
         chunks,

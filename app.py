@@ -56,7 +56,7 @@ if prompt := st.chat_input("Ask about your PDF"):
                 # Simple QA flow
                 llm  = ChatGoogleGenerativeAI(
                     model="gemini-1.5-flash-latest",
-                    google_api_key=os.getenv("GEMINI_API_KEY"),  # From Streamlit secrets
+                    google_api_key= st.secrets.get("GEMINI_API_KEY", os.getenv("GEMINI_API_KEY")),  # From Streamlit secrets
                     temperature=0.3
                 )
                 
