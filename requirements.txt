@@ -1,5 +1,5 @@
 streamlit==1.33.0
-langchain-google-genai==0.1.0
+langchain-google-genai==0.0.1
 chromadb==0.4.22
 pypdf==4.2.0
 python-dotenv==1.0.1
