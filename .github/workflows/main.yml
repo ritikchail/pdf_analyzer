@@ -25,12 +25,14 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          git config --global user.email "ritik254chail@gmail.com"
-          git config --global user.name "GitHub Action"
-          git clone https://USER:$HF_TOKEN@huggingface.co/spaces/ritikchail/pdf_analyzer hf_space
-          cd hf_space
-          # Copy only contents, not the parent folder
-          cp -r ../{app.py,processing.py,session_manager.py,requirements.txt,README.md} .
+          mkdir temp_dir && cd temp_dir
+          git init
+          git remote add origin https://USER:$HF_TOKEN@huggingface.co/spaces/ritikchail/pdf_analyzer
+          git pull origin main --allow-unrelated-histories --force
+          git rm -r * || echo "No files to delete"
+          cp ../app.py ../processing.py ../session_manager.py ../requirements.txt .
+
+          # Force push
           git add .
-          git -c user.email="actions@github.com" -c user.name="GitHub Action" commit -m "Update from GitHub"
-          git push
+          git commit -m "Overwrite with core files" --allow-empty
+          git push origin main --force
