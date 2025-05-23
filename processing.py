@@ -5,6 +5,7 @@ from langchain_google_genai import GoogleGenerativeAIEmbeddings
 import tempfile
 import os
 from dotenv import load_dotenv
+import streamlit as st
 
 def process_pdf(uploaded_file, user_id):
     """Handle PDF processing and return vectorstore"""
