@@ -25,14 +25,8 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          mkdir temp_dir && cd temp_dir
           git init
           git remote add origin https://USER:$HF_TOKEN@huggingface.co/spaces/ritikchail/pdf_analyzer
-          git pull origin main --allow-unrelated-histories --force
-          git rm -r * || echo "No files to delete"
-          cp ../app.py ../processing.py ../session_manager.py ../requirements.txt .
-
-          # Force push
-          git add .
-          git commit -m "Overwrite with core files" --allow-empty
+          git add -A
+          git commit -m "Force push" --allow-empty
           git push origin main --force
