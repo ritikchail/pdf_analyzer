@@ -1,9 +1,9 @@
-streamlit==1.33.0
-google-generativeai==0.1.0  # Updated to match langchain-google-genai's requirement
+streamlit==1.45.1
 langchain-google-genai==2.1.4
 chromadb==1.0.9
-pypdf==4.2.0
-python-dotenv==1.0.1
+pypdf==5.5.0
+python-dotenv==1.1.0
 langchain-core==0.3.60
-langchain-community==0.0.34
+langchain-community==0.3.24
 langchain-text-splitters==0.3.8
+
