@@ -6,10 +6,9 @@ from langchain.chains import RetrievalQA
 import os
 from dotenv import load_dotenv
 import atexit
-import os
+import pip
+pip.main(["install", "protobuf==3.20.3"])
 
-
-os.environ["PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION"] = "python"
 
 load_dotenv()
 # Initialize session
