@@ -8,15 +8,6 @@ from dotenv import load_dotenv
 import atexit
 import os
 import sys
-from pip._internal import main as pip_main  # Hidden internal API
-
-# Force-install protobuf 3.20.x before other imports
-pip_main(["install", "--quiet", "protobuf==3.20.3"])
-
-# Now safe to import ChromaDB
-import chromadb
-from langchain_community.vectorstores import Chroma
-
 
 load_dotenv()
 # Initialize session
