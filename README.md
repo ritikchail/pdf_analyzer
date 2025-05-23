@@ -1,3 +1,13 @@
+---
+title: PDF analyzer
+sdk: streamlit
+emoji: 🚀
+colorFrom: gray
+colorTo: blue
+pinned: true
+short_description: A Streamlit app that analyzes PDFs using RAG
+---
+
 # PDF Analyzer with RAG
 
 A Streamlit app that analyzes PDFs using Retrieval-Augmented Generation (RAG) with Google Gemini and ChromaDB.
