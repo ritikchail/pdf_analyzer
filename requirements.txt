@@ -1,5 +1,5 @@
 streamlit==1.33.0
-google-generativeai==0.6.18  # Updated to match langchain-google-genai's requirement
+google-generativeai==0.1.0  # Updated to match langchain-google-genai's requirement
 langchain-google-genai==2.1.4
 chromadb==1.0.9
 pypdf==4.2.0
