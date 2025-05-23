@@ -27,7 +27,7 @@ jobs:
         run: |
           git config --global user.email "ritik254chail@gmail.com"
           git config --global user.name "GitHub Action"
-          git clone ttps://USER:$HF_TOKEN@huggingface.co/spaces/ritikchail/pdf_analyzer hf_space
+          git clone https://USER:$HF_TOKEN@huggingface.co/spaces/ritikchail/pdf_analyzer hf_space
           cd hf_space
           # Copy only contents, not the parent folder
           cp -r ../{app.py,processing.py,session_manager.py,requirements.txt,README.md} .
